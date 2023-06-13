@@ -1,0 +1,29 @@
+{% extends 'WebGestApp/base.html' %}
+{% load static %}
+
+{% block titulo %}
+    Búsqueda de Proveedor por CUIT
+{% endblock titulo %}
+
+{% block main %}
+    <form action="{% url 'buscar_proveedor' %}" method="POST">
+        {% csrf_token %}
+        <table>
+            {{ form.as_table }}
+        </table>
+        <input type="submit" value="Buscar">
+    </form>
+
+    {% if proveedores %}
+        <h3>Resultados de la búsqueda:</h3>
+        <ul>
+            {% for proveedor in proveedores %}
+            <li>
+                Razón Social: {{ proveedor.razon_social }} - CUIT: {{ proveedor.cuit }} - Email: {{ proveedor.email }}
+            </li>
+        {% empty %}
+            <li>No se encontraron resultados.</li>
+        {% endfor %}
+        </ul>
+    {% endif %}
+{% endblock main %}

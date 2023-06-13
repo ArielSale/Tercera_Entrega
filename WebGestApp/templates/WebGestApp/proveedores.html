@@ -1,0 +1,16 @@
+{% extends 'WebGestApp/base.html' %}
+
+{% load static %}
+
+{% block titulo %}
+    Proveedores
+{% endblock titulo %}
+
+{% block main %}
+    <h1>Proveedores</h1>
+    <div>
+        <a href="{% url 'alta_proveedor' %}">Alta Proveedor</a>
+        <a href="{% url 'listar_proveedores' %}">Detalle de Proveedores</a>
+        <a href="{% url 'buscar_proveedor' %}">Buscar</a>
+    </div>
+{% endblock main %}

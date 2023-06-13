@@ -1,0 +1,33 @@
+{% extends 'WebGestApp/base.html' %}
+
+{% load static %}
+
+{% block titulo %}
+    Detalle de Proveedores
+{% endblock titulo %}
+
+
+{% block main %}
+
+<h2>Listado de Proveedores</h2>
+
+<table>
+    <tr>
+        <th>Razon Social</th>
+        <th>CUIT</th>
+        <th>Email</th>
+    </tr>
+    {% for proveedor in proveedores %}
+    <tr>
+        <td>{{ proveedor.razon_social }}</td>
+        <td>{{ proveedor.cuit }}</td>
+        <td>{{ proveedor.email }}</td>
+    </tr>
+    {% empty %}
+    <tr>
+        <td colspan="3">No se encontraron provedores.</td>
+    </tr>
+    {% endfor %}
+</table>
+
+{% endblock main %}

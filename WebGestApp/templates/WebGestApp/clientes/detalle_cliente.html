@@ -1,0 +1,15 @@
+{% extends 'WebGestApp/base.html' %}
+{% load static %}
+
+{% block titulo %}
+    Detalle de Cliente
+{% endblock titulo %}
+
+{% block main %}
+    <h3>Detalle de Cliente:</h3>
+    <ul>
+        <li>Razón Social: {{ cliente.razon_social }}</li>
+        <li>CUIT: {{ cliente.cuit }}</li>
+        <li>Email: {{ cliente.email }}</li>
+    </ul>
+{% endblock main %}

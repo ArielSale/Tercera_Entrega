@@ -1,0 +1,22 @@
+{% extends 'WebGestApp/base.html' %}
+
+{% load static %}
+
+{% block titulo %}
+    Alta Proveedor
+{% endblock titulo %}
+
+
+
+
+{% block main %}
+
+
+<form action="/WebGestApp/proveedores/alta_proveedor/" method="post">
+     {% csrf_token %}
+     {{ form }}
+     <input type="submit" value="Enviar">
+</form>
+
+
+{% endblock main %}

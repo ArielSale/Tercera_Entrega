@@ -1,0 +1,16 @@
+{% extends 'WebGestApp/base.html' %}
+
+{% load static %}
+
+{% block titulo %}
+    Stock
+{% endblock titulo %}
+
+{% block main %}
+    <h1>Stock
+    </h1>
+    <div>
+        <a href="{% url 'alta_producto' %}">Cargar Productos</a>
+        <a href="{% url 'listar_productos' %}">Listado de Productos</a>
+    </div>
+{% endblock main %}

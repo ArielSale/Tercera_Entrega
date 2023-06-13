@@ -1,0 +1,29 @@
+{% extends 'WebGestApp/base.html' %}
+{% load static %}
+
+{% block titulo %}
+    Búsqueda de Cliente por CUIT
+{% endblock titulo %}
+
+{% block main %}
+    <form action="{% url 'buscar_cliente' %}" method="POST">
+        {% csrf_token %}
+        <table>
+            {{ form.as_table }}
+        </table>
+        <input type="submit" value="Buscar">
+    </form>
+
+    {% if clientes %}
+    <h3>Resultados de la búsqueda:</h3>
+    <ul>
+        {% for cliente in clientes %}
+            <li>
+                Razón Social: {{ cliente.razon_social }} - CUIT: {{ cliente.cuit }} - Email: {{ cliente.email }}
+            </li>
+        {% empty %}
+            <li>No se encontraron resultados.</li>
+        {% endfor %}
+    </ul>
+{% endif %}
+{% endblock main %}

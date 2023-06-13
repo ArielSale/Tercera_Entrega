@@ -17,17 +17,14 @@
    http://127.0.0.1:8000/WebGestApp/
 
 4. Funcionalidades:
-   - Clientes: Permite dar de alta nuevos clientes y listar los clientes existentes.
-   - Proveedores: Permite dar de alta nuevos proveedores y listar los proveedores existentes.
+   - Clientes: Permite dar de alta nuevos clientes y listar los clientes existentes. Ademas cuenta con la posibilidad de hacer una busqueda especifica por CUIT.
+   - Proveedores: Permite dar de alta nuevos proveedores y listar los proveedores existentes. Ademas cuenta con la posibilidad de hacer una busqueda especifica por CUIT.
    - Stock: Permite dar de alta nuevos productos y listar los productos en stock.
 
-5. Sistema de Busqueda:
-   La aplicación cuenta con un sistema de busqueda especifico para clientes y proveedores. 
-
-6. Base de datos:
+5. Base de datos:
    La aplicación utiliza una base de datos llamada "bd.sqlite3" para almacenar la información. No es necesario interactuar directamente con la base de datos, ya que las funcionalidades proporcionadas por la aplicación se encargan de manejarla internamente.
 
-7. Páginas adicionales:
+6. Páginas adicionales:
    - Nosotros: Proporciona información adicional sobre la aplicación y su propósito.
    - Contacto: Te permite enviar un correo a los desarrolladores de la aplicación para contactarte. Tenga en cuenta que esta funcionalidad no está habilitada en la versión actual de la aplicación.
 
